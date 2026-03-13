@@ -1,9 +1,3 @@
-import React from 'react'
-
-export default function Navbar() {
-  return (
-    <div>
-      My TASKS
-    </div>
-  )
+export default function Navbar({ brandName }: { brandName: string }) {
+  return <div>{brandName}</div>;
 }
