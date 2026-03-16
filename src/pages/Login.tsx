@@ -25,14 +25,21 @@ function Login() {
       .then(res => res.json())
       .then(data => {
 
-        console.log(data);
+        console.log("LOGIN RESPONSE:", data);
+        console.log("USER DATA:", data.data);
 
-        if(data.data){   // ✅ check added
+        if (data.data) {
 
-          localStorage.setItem("token", data.token || data.data?.token);
+          // ✅ token save
+          localStorage.setItem("token", data.data.token);
+
+          // ✅ userId save
+          localStorage.setItem("userId", data.data.user.id);
+
+          // redirect
           navigate("/home");
 
-        }else{
+        } else {
 
           alert("Invalid email or password");
 
