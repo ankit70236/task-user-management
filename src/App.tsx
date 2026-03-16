@@ -4,7 +4,8 @@ import HomePage from "./pages/HomePage";
 import Login from "./pages/Login";
 import Register from "./pages/Registation";
 import UpdateUser from "./Updateuser";
-import Profile from "./pages/Profile";
+import ListUser from "./pages/LIstUser";
+
 export default function App() {
 
   return (
@@ -17,7 +18,8 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/updateuser/:id" element={<UpdateUser />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/userslist" element={<ListUser />} />
+        <Route path="/userslist" element={<ListUser />} />
         {/* Redirect any unknown route to home */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
